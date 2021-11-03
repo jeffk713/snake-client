@@ -14,7 +14,13 @@ const connect = function () {
     console.log('Server says: ', data);
   });
 
-  conn.on('connect', () => conn.write('Name: Q1Q'));
+  conn.on('connect', () => {
+    conn.write('Name: Q1Q');
+
+    // conn.write('Move: up');
+    // setTimeout(() => conn.write('Move: up'), 100);
+    // setInterval(() => conn.write('Move: up'), 200);
+  });
 
   conn.on('end', () => console.log('kicked out from idling too long'));
 
