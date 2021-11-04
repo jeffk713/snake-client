@@ -17,7 +17,6 @@ const handleUserInput = function (key) {
   if (key === 's') {
     connection.write('Move: down');
   }
-
 };
 
 // setup interface to handle user input from stdin
